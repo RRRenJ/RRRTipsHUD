@@ -15,7 +15,7 @@ let RRRTips_content_max_width = RRRTips_width * 4 / 5
 let RRRTips_content_max_height = RRRTips_height * 4 / 5
 let RRRTips_image_width : CGFloat = 40
 
-class RRRTipsHUD : NSObject {
+public class RRRTipsHUD : NSObject {
     
     static let `default` = RRRTipsHUD()
     
@@ -39,7 +39,7 @@ class RRRTipsHUD : NSObject {
 
 
 
-extension RRRTipsHUD {
+public extension RRRTipsHUD {
 
     class func show(_ message : String, inView : UIView? = nil) {
         RRRTipsHUD.default.setupViews(imageName: nil, message: message, matherView: inView)
