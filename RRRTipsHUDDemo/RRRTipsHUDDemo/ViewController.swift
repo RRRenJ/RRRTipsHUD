@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            RRRTipsHUD.showLoading(message: "正在加载...")
+            RRRTipsHUD.showSuccess("成功咯")
         }
     }
 

@@ -41,23 +41,23 @@ class RRRTipsHUD : NSObject {
 
 extension RRRTipsHUD {
 
-    class func show(message : String, inView : UIView? = nil) {
+    class func show(_ message : String, inView : UIView? = nil) {
         RRRTipsHUD.default.setupViews(imageName: nil, message: message, matherView: inView)
     }
     
-    class func showSuccess(message : String, inView : UIView? = nil) {
+    class func showSuccess(_ message : String, inView : UIView? = nil) {
         RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_success", message: message, matherView: inView)
     }
     
-    class func showError(message : String, inView : UIView? = nil) {
+    class func showError(_ message : String, inView : UIView? = nil) {
         RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_error", message: message, matherView: inView)
     }
     
-    class func showLoading(message : String?, inView : UIView? = nil) {
+    class func showLoading(_ message : String?, inView : UIView? = nil) {
         RRRTipsHUD.default.setupViews(imageName: "__loading", message: message, matherView: inView)
     }
     
-    class func showProgress(message: String?, inView : UIView? = nil) {
+    class func showProgress(_ message: String?, inView : UIView? = nil) {
         RRRTipsHUD.default.progress = 0
         RRRTipsHUD.default.setupViews(imageName: "__progress", message: message, matherView: inView)
     }

@@ -12,7 +12,8 @@
 		B787FD472566AC3300EF19FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B787FD452566AC3300EF19FE /* Main.storyboard */; };
 		B787FD492566AC3300EF19FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B787FD482566AC3300EF19FE /* Assets.xcassets */; };
 		B787FD4C2566AC3300EF19FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B787FD4A2566AC3300EF19FE /* LaunchScreen.storyboard */; };
-		B787FD572566AD2C00EF19FE /* RRRTipsHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787FD562566AD2C00EF19FE /* RRRTipsHUD.swift */; };
+		B787FD5D2566AF8C00EF19FE /* RRRTipsHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787FD5C2566AF8C00EF19FE /* RRRTipsHUD.swift */; };
+		B787FD602566B09D00EF19FE /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B787FD5F2566B09D00EF19FE /* images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		B787FD482566AC3300EF19FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B787FD4B2566AC3300EF19FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B787FD4D2566AC3300EF19FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B787FD562566AD2C00EF19FE /* RRRTipsHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRRTipsHUD.swift; sourceTree = "<group>"; };
+		B787FD5C2566AF8C00EF19FE /* RRRTipsHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRRTipsHUD.swift; sourceTree = "<group>"; };
+		B787FD5F2566B09D00EF19FE /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,7 @@
 		B787FD3E2566AC3300EF19FE /* RRRTipsHUDDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B787FD552566AD2C00EF19FE /* RRRTipsHUD */,
+				B787FD5B2566AF8C00EF19FE /* RRRTipsHUD */,
 				B787FD3F2566AC3300EF19FE /* AppDelegate.swift */,
 				B787FD432566AC3300EF19FE /* ViewController.swift */,
 				B787FD452566AC3300EF19FE /* Main.storyboard */,
@@ -67,12 +69,14 @@
 			path = RRRTipsHUDDemo;
 			sourceTree = "<group>";
 		};
-		B787FD552566AD2C00EF19FE /* RRRTipsHUD */ = {
+		B787FD5B2566AF8C00EF19FE /* RRRTipsHUD */ = {
 			isa = PBXGroup;
 			children = (
-				B787FD562566AD2C00EF19FE /* RRRTipsHUD.swift */,
+				B787FD5C2566AF8C00EF19FE /* RRRTipsHUD.swift */,
+				B787FD5F2566B09D00EF19FE /* images.xcassets */,
 			);
-			path = RRRTipsHUD;
+			name = RRRTipsHUD;
+			path = ../../RRRTipsHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B787FD4C2566AC3300EF19FE /* LaunchScreen.storyboard in Resources */,
+				B787FD602566B09D00EF19FE /* images.xcassets in Resources */,
 				B787FD492566AC3300EF19FE /* Assets.xcassets in Resources */,
 				B787FD472566AC3300EF19FE /* Main.storyboard in Resources */,
 			);
@@ -146,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B787FD442566AC3300EF19FE /* ViewController.swift in Sources */,
-				B787FD572566AD2C00EF19FE /* RRRTipsHUD.swift in Sources */,
+				B787FD5D2566AF8C00EF19FE /* RRRTipsHUD.swift in Sources */,
 				B787FD402566AC3300EF19FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
