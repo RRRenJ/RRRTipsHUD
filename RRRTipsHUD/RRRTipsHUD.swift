@@ -101,7 +101,7 @@ private extension RRRTipsHUD {
         UIView.animate(withDuration: 0.1) {
             self.contentView!.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
-        if imageName == "rrrtipshud_success" || imageName == "rrrtipshud_error" {
+        if imageName != "__loading" && imageName != "__progress" {
             self.perform(#selector(hideHUDAnimation(matherView:)), with: matherView, afterDelay: self.hideTimeSeconds + 0.3)
         }
 
