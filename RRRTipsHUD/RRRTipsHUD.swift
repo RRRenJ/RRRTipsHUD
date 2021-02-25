@@ -42,38 +42,53 @@ public class RRRTipsHUD : NSObject {
 public extension RRRTipsHUD {
 
     class func show(_ message : String, inView : UIView? = nil) {
-        RRRTipsHUD.default.setupViews(imageName: nil, message: message, matherView: inView)
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.setupViews(imageName: nil, message: message, matherView: inView)
+        }
     }
     
-    class func showSuccess(_ message : String, inView : UIView? = nil) {
-        RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_success", message: message, matherView: inView)
+    class func showSuccess(_ message : String? = nil, inView : UIView? = nil) {
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_success", message: message, matherView: inView)
+        }
     }
     
-    class func showError(_ message : String, inView : UIView? = nil) {
-        RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_error", message: message, matherView: inView)
+    class func showError(_ message : String? = nil, inView : UIView? = nil) {
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.setupViews(imageName: "rrrtipshud_error", message: message, matherView: inView)
+        }
     }
     
-    class func showLoading(_ message : String?, inView : UIView? = nil) {
-        RRRTipsHUD.default.setupViews(imageName: "__loading", message: message, matherView: inView)
+    class func showLoading(_ message : String? = nil, inView : UIView? = nil) {
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.setupViews(imageName: "__loading", message: message, matherView: inView)
+        }
     }
     
-    class func showProgress(_ message: String?, inView : UIView? = nil) {
-        RRRTipsHUD.default.progress = 0
-        RRRTipsHUD.default.setupViews(imageName: "__progress", message: message, matherView: inView)
+    class func showProgress(_ message: String? = nil, inView : UIView? = nil) {
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.progress = 0
+            RRRTipsHUD.default.setupViews(imageName: "__progress", message: message, matherView: inView)
+        }
     }
     
     class func updateProgress(_ progress : CGFloat, inView : UIView? = nil) {
-        if let view = RRRTipsHUD.default.contentView?.progressView {
-            view.updateProgress(progress)
-            if progress >= 1 && RRRTipsHUD.default.progress < 1 {
-                RRRTipsHUD.default.perform(#selector(hideHUDAnimation(matherView:)), with: inView, afterDelay: 0.5)
+        DispatchQueue.main.async {
+            if let view = RRRTipsHUD.default.contentView?.progressView {
+                view.updateProgress(progress)
+                if progress >= 1 && RRRTipsHUD.default.progress < 1 {
+                    RRRTipsHUD.default.perform(#selector(hideHUDAnimation(matherView:)), with: inView, afterDelay: 0.5)
+                }
+                RRRTipsHUD.default.progress = progress
             }
-            RRRTipsHUD.default.progress = progress
         }
     }
     
     class func hideHUD(inView : UIView? = nil){
-        RRRTipsHUD.default.hideHUD(matherView: inView)
+        DispatchQueue.main.async {
+            RRRTipsHUD.default.hideHUD(matherView: inView)
+        }
+        
     }
     
 }
