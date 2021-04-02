@@ -254,7 +254,7 @@ private extension RRRTipsContentView{
                 self.imageView!.image = RRRTipsContentView.image(name: imageName!)
             }
             self.addSubview(self.imageView!)
-            if imageName != "__progress" {
+            if imageName != "__progress" && imageName != "__loading" {
                 self.imageView!.isHidden = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.imageView!.isHidden = false
