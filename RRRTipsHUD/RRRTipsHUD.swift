@@ -17,9 +17,9 @@ let RRRTips_image_width : CGFloat = 40
 
 public class RRRTipsHUD : NSObject {
     
-    static let `default` = RRRTipsHUD()
+    public static let `default` = RRRTipsHUD()
     
-    var hideTimeSeconds : TimeInterval = 2
+    public var hideTimeSeconds : TimeInterval = 2
     
     private var contentView: RRRTipsContentView?
     
